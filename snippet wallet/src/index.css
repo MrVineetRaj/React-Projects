@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: blue;
+}
+body {
+  background: white;
+  font-family: "Rubik";
+  min-height: 100svh;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* @apply px-[20%]; */
+}
+
+button {
+  cursor: pointer;
+  transition: scale 0.1s ease-in-out;
+  border-radius: 5px;
+  font-weight: 700;
+  @apply shadow-lg;
+  &:active {
+    scale: 0.95;
+  }
+}
+
+.input {
+  @apply relative w-full  flex;
+
+  label {
+    @apply absolute font-bold text-sm -top-3 left-2 bg-white;
+  }
+
+  textarea,
+  select,
+  input {
+    @apply w-full p-2 outline-none border border-gray-200 rounded-md;
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
